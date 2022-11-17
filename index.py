@@ -40,22 +40,8 @@ def about():
         empresa=request.form['empresa'] 
         result=predecir(nivel,mes, year, empresa)
         
+        return render_template('resul.html', result=result)
         #return f'<div class="alert alert-primary" role="alert">Los días que se va tardar son:'+ str(result) +'</div>'
-        return f'<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">'\
-                    '<div class="modal-dialog">'\
-                      '<div class="modal-content">'\
-                        '<div class="modal-header">'\
-                          '<h3 class="modal-title" id="exampleModalLabel">Resultado</h3>'\
-                        '</div>'\
-                        '<div class="modal-body">'\
-                        'Los días que se va tardar son:'+ str(result)+\
-                        '</div>'\
-                        '<div class="modal-footer">'\
-                          '<a href="/predictivo" class="btn btn-primary" tabindex="-1" role="button" >Close</a>'\
-                            '</div>'\
-                        '</div>'\
-                    '</div>'\
-                '</div>'
     else :
         return render_template('predictivo.html')
 
