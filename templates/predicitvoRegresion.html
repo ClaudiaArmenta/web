@@ -45,47 +45,34 @@
     <p>Vamos a predecir cuanto tiempo se tardarian en resolver un ticket de acuerdo a sus características. </p>
     <p>Para poder realizar predicciones, utilizamos el algoritmo regresión lineal, lo desarollamos en Python, la
         confianza de nuestro modelo es de .56 por lo que no es el ideal.</p>
-    </div>
-
-    <div class=container>
-        <div class="row">
-            <div class="col-4">
-                <form action="" method="post">  
-                    <div class="form-group">
-                        <label class="col-form-label mt-4" for="nivelr">Ingresa el nivel</label>
-                        <input type="text" name="nivelr" class="form-control" id="Nivelr">
+        <div class="col-8">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                    <div class="card border-primary mb-3" style="max-width: 20rem;">
+                        <div class="card-header">Grafica</div>
+                        <div class="card-body">
+                            <h4 class="card-title">Grafica generada con SAS</h4>
+                            <p class="card-text">Grafica de regresión lineal generada con nuestros datos atraves de SAS.</p>
+                            <img class="card-img-top" src="{{url_for('static', filename='images/g1.png')}}" alt="Card image cap">
+                        </div>
+                        </div>
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
-            </div>
-            <div class="col-8">
-                <div class="container">
-                    <div class="row">
-                      <div class="col">
-                        <div class="card border-primary mb-3" style="max-width: 20rem;">
-                            <div class="card-header">Grafica</div>
+                    <div class="col">
+                    <div class="card border-primary mb-3" style="max-width: 20rem;">
+                        <div class="card-header">Codigo</div>
+                        <div class="card-body">
+                            <img class="card-img-top" src="{{url_for('static', filename='images/colab.png')}}" alt="Card image cap">
                             <div class="card-body">
-                              <h4 class="card-title">Grafica generada con SAS</h4>
-                              <p class="card-text">Grafica de regresión lineal generada con nuestros datos atraves de SAS.</p>
-                              <img class="card-img-top" src="{{url_for('static', filename='images/g1.png')}}" alt="Card image cap">
-                            </div>
-                          </div>
-                      </div>
-                      <div class="col">
-                        <div class="card border-primary mb-3" style="max-width: 20rem;">
-                            <div class="card-header">Codigo</div>
-                            <div class="card-body">
-                                <img class="card-img-top" src="{{url_for('static', filename='images/colab.png')}}" alt="Card image cap">
-                                <div class="card-body">
-                                <h5 class="card-title">Link</h5>
-                                <a href="https://colab.research.google.com/drive/16Fmu-t0t3U3NpV604xaO5z1UfEE0puER?usp=sharing" class="btn btn-primary"  >Google Colab</a>
-                            </div>
-                          </div>
-                      </div>
-                    </div>  
-                </div>
+                            <h5 class="card-title">Link</h5>
+                            <a href="https://colab.research.google.com/drive/1S9ykrAP0o94tWQ5Kl2Q5HIEHXua95Tsq?usp=sharing" class="btn btn-primary"  >Google Colab</a>
+                        </div>
+                        </div>
+                    </div>
+                </div>  
             </div>
         </div>
+
     </div>
 </body>
 </html>
