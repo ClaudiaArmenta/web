@@ -26,13 +26,13 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item active">
-                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/">Home <span class="sr-only"></span></a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="/predicitvo">Predicitivo</a>
+                    <a class="nav-link" href="/predictivoForest">Predicitivo con Forest</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Documentación</a>
+                        <a class="nav-link" href="/predictivoRegresion">Predictivo con Regresión</a>
                     </li>
                 </ul>
                 </div>
@@ -40,31 +40,21 @@
 
         </div>
     </div>
-    <h1>Predicciones</h1>
-    <p1>Para poder realizar predicciones, utilizamos el algoritmo random forest, lo desarollamos en Python, la
-        confianza de nuestro modelo es de .90 </p1>
+    <div class="container">
+    <h1>Prediccion con Regresión Lineal</h1>
+    <p>Vamos a predecir cuanto tiempo se tardarian en resolver un ticket de acuerdo a sus características. </p>
+    <p>Para poder realizar predicciones, utilizamos el algoritmo regresión lineal, lo desarollamos en Python, la
+        confianza de nuestro modelo es de .56 por lo que no es el ideal.</p>
+    </div>
 
     <div class=container>
         <div class="row">
             <div class="col-4">
                 <form action="" method="post">  
                     <div class="form-group">
-                        <label class="col-form-label mt-4" for="nivel">Ingresa el nivel</label>
-                        <input type="text" name="nivel" class="form-control" id="Nivel">
+                        <label class="col-form-label mt-4" for="nivelr">Ingresa el nivel</label>
+                        <input type="text" name="nivelr" class="form-control" id="Nivelr">
                     </div>
-                    <div class="form-group">
-                        <label class="col-form-label mt-4" for="mes">Ingresa el mes</label>
-                        <input type="text" name="mes" class="form-control" id="mes">
-                    </div>
-                    <div class="form-group">
-                        <label class="col-form-label mt-4" for="mes">Ingresa el año</label>
-                        <input type="text" name="year" class="form-control" id="year">
-                    </div>
-                    <div class="form-group">
-                        <label class="col-form-label mt-4" for="empresa">Ingresa la empresa</label>
-                        <input type="text" name="empresa" class="form-control" id="empresas">
-                    </div>
-
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>
@@ -73,25 +63,26 @@
                     <div class="row">
                       <div class="col">
                         <div class="card border-primary mb-3" style="max-width: 20rem;">
-                            <div class="card-header">Mapa de color</div>
+                            <div class="card-header">Grafica</div>
                             <div class="card-body">
-                              <h4 class="card-title">Mapa de Correlaciones</h4>
-                              <p class="card-text">Entre más rosa más corracion, entre más azul menos.</p>
-                              <img class="card-img-top" src="{{url_for('static', filename='images/mapacolor.png')}}" alt="Card image cap">
+                              <h4 class="card-title">Grafica generada con SAS</h4>
+                              <p class="card-text">Grafica de regresión lineal generada con nuestros datos atraves de SAS.</p>
+                              <img class="card-img-top" src="{{url_for('static', filename='images/g1.png')}}" alt="Card image cap">
                             </div>
                           </div>
                       </div>
                       <div class="col">
                         <div class="card border-primary mb-3" style="max-width: 20rem;">
-                            <div class="card-header">Mes</div>
+                            <div class="card-header">Codigo</div>
                             <div class="card-body">
-                              <h4 class="card-title">Diferencia vs Mes</h4>
-                              <p class="card-text">En la grafica podemos ver la diferencia de la realidad(azul) vs nuestra prediccion(naranja).</p>
-                              <img class="card-img-top" src="{{url_for('static', filename='images/mes.png')}}" alt="Card image cap">
+                                <img class="card-img-top" src="{{url_for('static', filename='images/colab.png')}}" alt="Card image cap">
+                                <div class="card-body">
+                                <h5 class="card-title">Link</h5>
+                                <a href="https://colab.research.google.com/drive/16Fmu-t0t3U3NpV604xaO5z1UfEE0puER?usp=sharing" class="btn btn-primary"  >Google Colab</a>
                             </div>
                           </div>
                       </div>
-                    </div>
+                    </div>  
                 </div>
             </div>
         </div>
