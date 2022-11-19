@@ -46,10 +46,10 @@ def about():
         return render_template('resul.html', result=result)
     else :
         return render_template('predictivoForest.html')
-
+'''
 @app.route('/predictivoRegresion')
 def aboutR():
-        return render_template('predicitvoRegresion.html')
-
+        return render_template('predicitvoRegresion.html')'''
+        
 if __name__=='__main__':
     app.run(debug=False,host='0.0.0.0')
